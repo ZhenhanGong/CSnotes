@@ -1,0 +1,3 @@
+sequential consistency
+eventual consistency
+causual consistency
