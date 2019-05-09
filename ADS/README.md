@@ -2,4 +2,4 @@
 <br>
 
 [Consistency](Consistency.md)
-![pic](what_is_consistency.png)
+![pic](img/what_is_consistency.png)
