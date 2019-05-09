@@ -6,7 +6,7 @@
 Single object consistency is also called "coherence".
 2. database:
 Consistency across multiple objects (all or nothing).
-![Consistency](CSnotes/ADS/img/what_is_consistency.png)
+![Consistency](img/what_is_consistency.png)
 <br>
 
 ## Difference between Consistency and Coherence.
