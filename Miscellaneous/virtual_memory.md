@@ -7,7 +7,7 @@ addressable semiconductor memory which operate at a high speed, for example **RA
 the CPU, the computer usually uses its *input*/*output* channels to access secondary storage.
 Hard disk Drives(*HDD*) or Solid-State Drives(*SSD*) are usually used as secondary storages.<br>
 
-![storage hierarchy](storage-hierarchy.png)
+![storage hierarchy](storage-hierarchy.png | width=100)
 
 
 ## Virtual Address
