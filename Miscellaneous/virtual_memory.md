@@ -7,7 +7,7 @@ addressable semiconductor memory which operate at a high speed, for example **RA
 the CPU, the computer usually uses its *input*/*output* channels to access secondary storage.
 Hard disk Drives(*HDD*) or Solid-State Drives(*SSD*) are usually used as secondary storages.<br>
 
-![storage hierarchy](storage-hierarchy.png | width=100)
+<img src="storage-hierarchy.png" alt="storage hierarchy" width="300"/>
 
 
 ## Virtual Address
@@ -24,14 +24,14 @@ automatically translates virtual addresses to physical addresses.
 The fast path through the MMU can perform those translations stored in the **Translation
 Lookaside Buffer**(TLB), which is a cache of the mapping from the OS's page table.
 
-![TLB](TLB.png)
+<img src="TLB.png" alt="TLB" width="300"/>
 
 
 ## Page Table
 A **Page Table** is the data structure used by a virtual memory system in an OS to store the
 mapping between virtual addresses and physical addresses.
 
-![page table](page_table.png)
+<img src="page_table.png" alt="page table" width="300"/>
 
 
 ## Virtual Memory
@@ -41,7 +41,7 @@ address space, which contains code and data for that program *only*.
   Virtual Memory makes application programming *easier* by hiding fragmentation of physical
 memory; by delegating to the kernel the burden of managing the memory hierarchy.
 
-![virtual memory](virtual_memory.png)
+<img src="virtual_memory.png" alt="virtual memory" width="300"/>
 
 
 ## Paging
