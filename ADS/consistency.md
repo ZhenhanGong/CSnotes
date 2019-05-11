@@ -2,44 +2,37 @@
 
 ## What is Consistency
 > **Consistency model** defines rules for the apparent order and visibility of updates.
-<br>
 1. local memory:
   **Single object** consistency is also called "coherence".
 2. database:
   Consistency across **multiple objects** (all or nothing).
-<br>
 ![Consistency](what_is_consistency.png)
-<br>
+
+## Consistency is hard in Distributed System
+  Consistency is hard in distributed systems.
+- Data replication.(Caching)
+- Concurrency.(no shared locks)
+- Failure.(machines or network)
 
 ## Difference between Consistency and Coherence.
   **Coherence** occurs in systems that are cached or cache-less, and it deals with when writes
-to a **single variable** are seen by all processors.
+to a **single variable** are seen by all processors. A memory is coherent if a *read* operation
+always retrieve the value of most recent *write* operation.<br>
   **Consistency** deals with the ordering of operations to **multiple variable** with respect to
-all processors.
-<br>
+all processors.<br>
 
 ## Consistency Models
   **Consistency Models** are used in distributed systems like **Distributed Shared Memory** 
-systems or distributed data store(such as **File Systems**, **Database**).
+systems or distributed data store(such as **File Systems**, **Database**).<br>
   **Consistency Models** specify some rules, if those rules are followed, memory will be 
-consist, and the results of *reading*, *writing*, or *updating* memory will be predictable.
+consist, and the results of *reading*, *writing*, or *updating* memory will be predictable.<br>
   There are several DS consistency models, including **Strict Consistency**, **Sequential 
-Consistency**, **Causual Consistency**, **Release Consistency**, and **Eventual Consistency**.
-<br>
-
-## Consistency is hard in DS
-  Consistency is hard in distributed systems.
-- Data replication.
-- Concurrency.(no shared locks)
-- Failure.(machines or network)
-<br>
+Consistency**, **Causual Consistency**, **Release Consistency**, and **Eventual Consistency**.<br>
 
 ## Strict Consistency
   Strict Consistency is the strongest consistency model. And it is impractical to 
-implement.
-<br>
+implement.<br>
   Under this model, each operation is stamped with a global wall-clock time.
-<br>
 
 ## Sequential Consistency
 <br>
