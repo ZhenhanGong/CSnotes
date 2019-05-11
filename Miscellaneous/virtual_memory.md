@@ -24,14 +24,14 @@ automatically translates virtual addresses to physical addresses.
 The fast path through the MMU can perform those translations stored in the **Translation
 Lookaside Buffer**(TLB), which is a cache of the mapping from the OS's page table.
 
-<img src="TLB.png" alt="TLB" width="300"/>
+<img src="TLB.png" alt="TLB" width="400"/>
 
 
 ## Page Table
 A **Page Table** is the data structure used by a virtual memory system in an OS to store the
 mapping between virtual addresses and physical addresses.
 
-<img src="page_table.png" alt="page table" width="300"/>
+<img src="page_table.png" alt="page table" width="400"/>
 
 
 ## Virtual Memory
@@ -41,7 +41,7 @@ address space, which contains code and data for that program *only*.
   Virtual Memory makes application programming *easier* by hiding fragmentation of physical
 memory; by delegating to the kernel the burden of managing the memory hierarchy.
 
-<img src="virtual_memory.png" alt="virtual memory" width="300"/>
+<img src="virtual_memory.png" alt="virtual memory" width="400"/>
 
 
 ## Paging
