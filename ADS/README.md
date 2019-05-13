@@ -1,7 +1,7 @@
 # ADS (Advanced Distributed System)
 <br>
 
-[Consistency](Consistency.md)
+[Consistency](consistency.md)
 <br>
 
 Atomicity
