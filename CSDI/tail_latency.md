@@ -12,7 +12,7 @@ percentage of requests whose latency is less than the corresponding x value.
 <br>
   For example, the point *(80%, 5ms)* means 80% percent of requests is processed in less than 5ms.
 <br>
-![CDF figure](cdf.png)
+<img src="cdf.png" alt="CDF figure" width="300">
 <br>
 
 ## Why Latency exist?
