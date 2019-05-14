@@ -25,7 +25,7 @@ will introduce more communication, computation and synchronization overhead.<br>
 **parallelize the workloads to avoid load imbalance**. As for locality, it is not worthwhile
 since it will incur imbalance, high contention and heavy network traffic.
 <br>
-<p>
+</p>
 
 ### 3.2 Dilemma in natural graph
   However, in natural graph, both Low-degree vertex and High-degree vertex can not be
