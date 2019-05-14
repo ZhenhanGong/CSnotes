@@ -11,48 +11,71 @@
 communicate along *edges*.<br>
 
 
+
 ## Power-law degree distribution
 > "*most* vertices have relative *few* neighbors while a *few* have *many* neighbors."
 
-
-## Challenge: Locality vs. Parallelism
-  **Low-degree vertex** prefer *locality* over parallelism, since making resource locally accessible
-can **reduce network latency**. As for parallelism, it is not worthwhile since it will introduce 
-more communication, computation and synchronization overhead.<br>
+### Challenge: Locality vs. Parallelism
+  **Low-degree vertex** prefer *locality* over parallelism, since making resource locally
+accessible can **reduce network latency**. As for parallelism, it is not worthwhile since it
+will introduce more communication, computation and synchronization overhead.<br>
   **High-degree vertex** prefer *parallelism* over locality, since parallelism can evenly
-**parallelize the workloads to avoid load imbalance**. As for locality, it is not worthwhile since
-it will incur imbalance, high contention and heavy network traffic.<br>
-  However, in natural graph, both Low-degree vertex and High-degree vertex can not be ignored,
-for example, in Sina Blog, there are *100M* users who has *100* followers, and there are *100* users
-who has *100M* followers. Therefore both Low-degree vertex and High-degree vertex are important.
-This necessitate a partition algorithm to take care of both **locality for low-degree vertex**
+**parallelize the workloads to avoid load imbalance**. As for locality, it is not worthwhile
+since it will incur imbalance, high contention and heavy network traffic.<br>
+
+### Dilemma in natural graph
+  However, in natural graph, both Low-degree vertex and High-degree vertex can not be
+ignored, for example, in Sina Blog, there are *100M* users who has *100* followers, and there
+are *100* users who has *100M* followers. Therefore both Low-degree vertex and High-degree
+vertex are important.
+  This necessitate a partition algorithm to take care of both **locality for low-degree vertex**
 and **parallelism for high-degree vertex**.<br>
+
 
 
 ## Existing efforts
 
 ### Pregel & GraphLab
-Focus on exploiting *Locality* <br>
-Partition: use *edge-cut* to evenly assign *vertices* along with all edges <br>
-Computation: *aggregate* all resources (i.e. messages or replicas) of a vertex on local machine <br>
+  Focus on exploiting *Locality* <br>
+  Partition: use *edge-cut* to evenly assign *vertices* along with all edges <br>
+  Computation: *aggregate* all resources (i.e. messages or replicas) of a vertex on local 
+machine <br>
 
-![Pregel GraphLab](graphlab_pregel.png)
+<img src="graphlab_pregel.png" alt="Pregel GraphLab" width="350"/>
 
 ### PowerGraph & GraphX
-Focus on exploiting *Parallelism* <br>
-Partition: use *vertex-cut* to evenly assign *edges* with replicated vertices <br>
-Computation: *decompose* the workload of a vertex into multiple machines <br>
+  Focus on exploiting *Parallelism* <br>
+  Partition: use *vertex-cut* to evenly assign *edges* with replicated vertices <br>
+  Computation: *decompose* the workload of a vertex into multiple machines <br>
 
-![PowerGraph](powergraph.png)
+<img src="powergraph.png" alt="PowerGraph" width="350"/>
+
 
 
 ## PowerLyra
-differentiated graph computation & partition
+  **PowerLyra** adopts differentiated graph computation & partition strategies on skewed graphs.
+And it embraces both **locality** for *low-degree vertex* and **parallelism** for *high-degree 
+vertex*.
 
-### graph partitioning
-Hybrid-cut
-Low-cut (like edge-cut)
-High-cut (like vertex-cut)
+### Graph partitioning
+  *Both* vertex cut & edge cut will use *replicas*.
+
+#### Vertex cut
+  **Vertex cut** will evenly assign **edges** with replicated vertices.
+  Replicas store **incomplete** edges info.
+  Computation will be parallelize on all replicas.
+
+<img src="edge-vertex-cut.png" alt="vertex cut & edge cut" width="350"/>
+
+#### Edge cut
+  **Edge cut** will evenly assign **vertices** along with all edges.
+  Masters store **complete** edges info.
+  No computation task run on replicas.
+  
+
+  **Hybrid-cut**: differentiate graph partitioning for low-degree & high-degree vertices.
+- Low-cut (like edge-cut)
+- High-cut (like vertex-cut)
 
 #### low-cut
 hash vertices to machines
@@ -66,6 +89,6 @@ graph store: edge-list
 
 
 
-## graph computation
+## Graph computation
 hybrid-mode
 
