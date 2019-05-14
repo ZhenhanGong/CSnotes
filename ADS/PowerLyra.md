@@ -41,14 +41,14 @@ and **parallelism for high-degree vertex**.<br>
   Computation: *aggregate* all resources (i.e. messages or replicas) of a vertex on local 
 machine <br>
 
-<img src="graphlab_pregel.png" alt="Pregel GraphLab" width="240"/>
+<img src="graphlab_pregel.png" alt="Pregel GraphLab" width="350"/>
 
 ### PowerGraph & GraphX
   Focus on exploiting *Parallelism* <br>
   Partition: use *vertex-cut* to evenly assign *edges* with replicated vertices <br>
   Computation: *decompose* the workload of a vertex into multiple machines <br>
 
-<img src="powergraph.png" alt="PowerGraph" width="450"/>
+<img src="powergraph.png" alt="PowerGraph" width="250"/>
 
 
 
@@ -65,7 +65,7 @@ vertex*.
   Replicas store **incomplete** edges info.
   Computation will be parallelize on all replicas.
 
-<img src="edge-vertex-cut.png" alt="vertex cut & edge cut" width="350"/>
+<img src="edge-vertex-cut.png" alt="vertex cut & edge cut" width="450"/>
 
 #### Edge cut
   **Edge cut** will evenly assign **vertices** along with all edges.
