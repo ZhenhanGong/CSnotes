@@ -27,7 +27,7 @@ since it will incur imbalance, high contention and heavy network traffic.<br>
   However, in natural graph, both Low-degree vertex and High-degree vertex can not be
 ignored, for example, in Sina Blog, there are *100M* users who has *100* followers, and there
 are *100* users who has *100M* followers. Therefore both Low-degree vertex and High-degree
-vertex are important.
+vertex are important.<br>
   This necessitate a partition algorithm to take care of both **locality for low-degree vertex**
 and **parallelism for high-degree vertex**.<br>
 
@@ -41,14 +41,14 @@ and **parallelism for high-degree vertex**.<br>
   Computation: *aggregate* all resources (i.e. messages or replicas) of a vertex on local 
 machine <br>
 
-<img src="graphlab_pregel.png" alt="Pregel GraphLab" width="350"/>
+<img src="graphlab_pregel.png" alt="Pregel GraphLab" width="240"/>
 
 ### PowerGraph & GraphX
   Focus on exploiting *Parallelism* <br>
   Partition: use *vertex-cut* to evenly assign *edges* with replicated vertices <br>
   Computation: *decompose* the workload of a vertex into multiple machines <br>
 
-<img src="powergraph.png" alt="PowerGraph" width="350"/>
+<img src="powergraph.png" alt="PowerGraph" width="450"/>
 
 
 
