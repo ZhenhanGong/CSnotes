@@ -15,9 +15,9 @@ communicate along *edges*.
 ## 3. Power-law degree distribution
 > "*most* vertices have relative *few* neighbors while a *few* have *many* neighbors."
 <br>
-<br>
 
 ### 3.1 Challenge: Locality vs. Parallelism
+<p>
   **Low-degree vertex** prefer *locality* over parallelism, since making resource locally
 accessible can **reduce network latency**. As for parallelism, it is not worthwhile since it
 will introduce more communication, computation and synchronization overhead.<br>
@@ -25,7 +25,7 @@ will introduce more communication, computation and synchronization overhead.<br>
 **parallelize the workloads to avoid load imbalance**. As for locality, it is not worthwhile
 since it will incur imbalance, high contention and heavy network traffic.
 <br>
-<br>
+<p>
 
 ### 3.2 Dilemma in natural graph
   However, in natural graph, both Low-degree vertex and High-degree vertex can not be
@@ -36,10 +36,8 @@ vertex are important.<br>
 and **parallelism for high-degree vertex**.
 <br>
 <br>
-<br>
 
 ## 4. Existing efforts
-<br>
 
 ### 4.1 Pregel & GraphLab
   Focus on exploiting *Locality* <br>
@@ -48,7 +46,6 @@ and **parallelism for high-degree vertex**.
 machine <br>
 
 <img src="graphlab_pregel.png" alt="Pregel GraphLab" width="350"/>
-<br>
 
 ### 4.2 PowerGraph & GraphX
   Focus on exploiting *Parallelism* <br>
@@ -56,8 +53,6 @@ machine <br>
   Computation: *decompose* the workload of a vertex into multiple machines <br>
 
 <img src="powergraph.png" alt="PowerGraph" width="250"/>
-<br>
-<br>
 
 ## 5. PowerLyra
   **PowerLyra** adopts differentiated graph computation & partition strategies on skewed graphs.
@@ -65,11 +60,9 @@ And it embraces both **locality** for *low-degree vertex* and **parallelism** fo
 vertex*.
 <br>
 <br>
-<br>
 
 ### 5.1 Graph partitioning
   *Both* vertex cut & edge cut will use *replicas*.
-<br>
 <br>
 
 #### 5.1.1 Vertex cut
@@ -78,7 +71,6 @@ vertex*.
   Computation will be parallelize on all replicas.
 
 <img src="edge-vertex-cut.png" alt="vertex cut & edge cut" width="500"/>
-<br>
 
 #### 5.1.2 Edge cut
   **Edge cut** will evenly assign **vertices** along with all edges.
