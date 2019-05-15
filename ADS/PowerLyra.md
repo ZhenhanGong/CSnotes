@@ -9,7 +9,6 @@
   Coding graph algorithms as **vertex-centric** programs to process *vertices* in parallel and
 communicate along *edges*.
 <br>
-<br>
 
 ## 3. Power-law degree distribution
 > "*most* vertices have relative *few* neighbors while a *few* have *many* neighbors."
@@ -56,7 +55,7 @@ And it embraces both **locality** for *low-degree vertex* and **parallelism** fo
 vertex*.
 <br>
 
-### 5.1 Graph partitioning
+### 5.1 Graph Partitioning
   *Both* vertex cut & edge cut will use *replicas*.
 <br>
 
@@ -73,23 +72,38 @@ vertex*.
   No computation task run on replicas.
 <br>
   
-TO BE CONTINUED
-  **Hybrid-cut**: differentiate graph partitioning for low-degree & high-degree vertices.
-- Low-cut (like edge-cut)
-- High-cut (like vertex-cut)
+#### 5.1.3 Hybrid-cut
+  **Hybrid-cut**: differentiate graph partitioning for *low-degree* & *high-degree* vertices.
+- **Low-cut**(inspired by edge-cut): reduce mirrors and exploiting locality for *low-degree
+vertex*.
+- **High-cut**(like vertex-cut): provide balance and restrict the impact of *high-degree
+vertex*.
 
-#### low-cut
-hash vertices to machines
+<img src="hybrid-cut.png" alt="hybrid-cut" width="450"/>
 
-#### high-cut
-heuristic
+  **Low-cut** evenly assign *low-degree vertices* along with only *in-edges* to machines by
+hashing **target** vertex.
+- No duplicate edges
+- Load balance(Vertices & Edges), since each low-degree vertex have smaller number
+of edges, evenly distribute vertices will result in balanced edges.
 
+<img src="low-cut.png" alt="low-cut" width="300"/>
 
+  **High-cut** distribute one-direction *in-edges* of *high-degree vertex* to machines by hashing
+**source** vertex.
+- No duplicate edges
+- Load balance(Edges & Vertices), since there are only a little high-degree vertices, add
+replicas of high-degree vertices will not impact the balance of vertices.
 
-graph store: edge-list
+<img src="high-cut.png" alt="high-cut" width="300"/>
 
+### 5.2 Graph Computation
 
+#### 5.2.1 Hybrid-model
+  **Hybrid-model**: differentiate the graph computation model to high-degree & low-degree
+vertices.
+- **High-degree model** decomposes workload of high-degree vertices for load balance.
+- **Low-degree model** minimize the communication cost for low-degree vertices.
 
-## Graph computation
-hybrid-mode
+<img src="hybrid-model.png" alt="hybrid-model" width="450"/>
 
