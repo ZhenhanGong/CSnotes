@@ -79,7 +79,7 @@ vertex*.
 - **High-cut**(like vertex-cut): provide balance and restrict the impact of *high-degree
 vertex*.
 
-<img src="hybrid-cut.png" alt="hybrid-cut" width="450"/>
+<img src="hybrid-cut.png" alt="hybrid-cut" width="600"/>
 
   **Low-cut** evenly assign *low-degree vertices* along with only *in-edges* to machines by
 hashing **target** vertex.
@@ -87,7 +87,7 @@ hashing **target** vertex.
 - Load balance(Vertices & Edges), since each low-degree vertex have smaller number
 of edges, evenly distribute vertices will result in balanced edges.
 
-<img src="low-cut.png" alt="low-cut" width="150"/>
+<img src="low-cut.png" alt="low-cut" width="200"/>
 
   **High-cut** distribute one-direction *in-edges* of *high-degree vertex* to machines by hashing
 **source** vertex.
@@ -95,7 +95,7 @@ of edges, evenly distribute vertices will result in balanced edges.
 - Load balance(Edges & Vertices), since there are only a little high-degree vertices, add
 replicas of high-degree vertices will not impact the balance of vertices.
 
-<img src="high-cut.png" alt="high-cut" width="150"/>
+<img src="high-cut.png" alt="high-cut" width="200"/>
 
 ### 5.2 Graph Computation
 
