@@ -87,7 +87,7 @@ hashing **target** vertex.
 - Load balance(Vertices & Edges), since each low-degree vertex have smaller number
 of edges, evenly distribute vertices will result in balanced edges.
 
-<img src="low-cut.png" alt="low-cut" width="300"/>
+<img src="low-cut.png" alt="low-cut" width="150"/>
 
   **High-cut** distribute one-direction *in-edges* of *high-degree vertex* to machines by hashing
 **source** vertex.
@@ -95,7 +95,7 @@ of edges, evenly distribute vertices will result in balanced edges.
 - Load balance(Edges & Vertices), since there are only a little high-degree vertices, add
 replicas of high-degree vertices will not impact the balance of vertices.
 
-<img src="high-cut.png" alt="high-cut" width="300"/>
+<img src="high-cut.png" alt="high-cut" width="150"/>
 
 ### 5.2 Graph Computation
 
@@ -105,5 +105,5 @@ vertices.
 - **High-degree model** decomposes workload of high-degree vertices for load balance.
 - **Low-degree model** minimize the communication cost for low-degree vertices.
 
-<img src="hybrid-model.png" alt="hybrid-model" width="450"/>
+<img src="hybrid-model.png" alt="hybrid-model" width="650"/>
 
