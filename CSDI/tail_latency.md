@@ -1,7 +1,8 @@
 # Tail Latency
 
-## Backgrounds
-### Throughput & Latency
+## 1. Backgrounds
+
+### 1.1 Throughput & Latency
   **Throughput** measures the rate at which requests are processed. (ex: 1 M req/sec)
 <br>
   **Latency** measures how long a request will be processed. (ex: 18 ms)
@@ -15,13 +16,13 @@ percentage of requests whose latency is less than the corresponding x value.
 <img src="cdf.png" alt="CDF figure" width="300">
 <br>
 
-## Why Latency exist?
+### 1.2 Why Latency exist?
 - Resource Contention
 - Queueing Delays
 - Backgrounds Activities
 
 
-## Tail Latency Amplified at Scale
+### 1.3 Tail Latency Amplified at Scale
   Large-scale online services usually parallelize sub-operations across many different machines 
 by *fanning out* a request from a *root* to a large number of *leaf* servers and merging responses 
 via a request-distribution tree. These sub-operations must all complete with a strict deadline 
