@@ -7,3 +7,5 @@
 [RDMA](rdma.md)
 
 [shared memory](shared_memory.md)
+
+[git submodule](git_submodules.md)
