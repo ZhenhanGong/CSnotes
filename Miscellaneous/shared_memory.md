@@ -20,3 +20,4 @@ the memory access time depends on the memory location relative to the processor.
   In **SMP**(Symmetric multiprocessing), all processors are connected to a single shared main
 memory, there is no such concept as local memory.
 
+
