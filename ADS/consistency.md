@@ -1,7 +1,7 @@
 # Distributed System Consistency
 
 ## 1. What is Consistency
-> **Consistency model** defines rules for the apparent order and visibility of updates.
+> **Consistency model** defines rules for the apparent **order** and **visibility** of updates.
 1. local memory:
   **Single object** consistency is also called "coherence".
 2. database:
