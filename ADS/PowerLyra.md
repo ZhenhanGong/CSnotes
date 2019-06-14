@@ -16,10 +16,10 @@ communicate along *edges*.
 ### 3.1 Challenge: Locality vs. Parallelism
   **Low-degree vertex** prefer *locality* over parallelism, since making resource locally
 accessible can **reduce network latency**. As for parallelism, it is not worthwhile since it
-will introduce more communication, computation and synchronization overhead.<br>
+will introduce more communication, computation and *synchronization* overhead.<br>
   **High-degree vertex** prefer *parallelism* over locality, since parallelism can evenly
 **parallelize the workloads to avoid load imbalance**. As for locality, it is not worthwhile
-since it will incur imbalance, high contention and heavy network traffic.
+since it will incur imbalance, high contention and *heavy network traffic*.
 <br>
 
 ### 3.2 Dilemma in natural graph
