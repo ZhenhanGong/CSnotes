@@ -36,16 +36,16 @@ and **parallelism for high-degree vertex**.
 
 ### 4.1 Pregel & GraphLab
   Focus on exploiting *Locality* <br>
-  Partition: use *edge-cut* to evenly assign *vertices* along with all edges <br>
-  Computation: *aggregate* all resources (i.e. messages or replicas) of a vertex on local 
+  *Partition*: use *edge-cut* to evenly assign *vertices* along with all edges <br>
+  *Computation*: *aggregate* all resources (i.e. messages or replicas) of a vertex on local 
 machine <br>
 
 <img src="graphlab_pregel.png" alt="Pregel GraphLab" width="350"/>
 
 ### 4.2 PowerGraph & GraphX
   Focus on exploiting *Parallelism* <br>
-  Partition: use *vertex-cut* to evenly assign *edges* with replicated vertices <br>
-  Computation: *decompose* the workload of a vertex into multiple machines <br>
+  *Partition*: use *vertex-cut* to evenly assign *edges* with replicated vertices <br>
+  *Computation*: *decompose* the workload of a vertex into multiple machines <br>
 
 <img src="powergraph.png" alt="PowerGraph" width="250"/>
 
