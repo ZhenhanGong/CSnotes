@@ -61,7 +61,7 @@ vertex*.
 
 #### 5.1.1 Vertex cut
   **Vertex cut** will evenly assign **edges** with replicated vertices.
-  Replicas store **incomplete** edges info.
+  *Replicas* store **incomplete** edges info.
   Computation will be parallelize on all replicas.
 
 <img src="edge-vertex-cut.png" alt="vertex cut & edge cut" width="500"/>
