@@ -56,7 +56,7 @@ vertex*.
 <br>
 
 ### 5.1 Graph Partitioning
-  *Both* vertex cut & edge cut will use *replicas*.
+  Both vertex cut & edge cut will use *replicas*.
 <br>
 
 #### 5.1.1 Vertex cut
