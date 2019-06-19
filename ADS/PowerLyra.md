@@ -50,7 +50,7 @@ machine <br>
 <img src="powergraph.png" alt="PowerGraph" width="250"/>
 
 ## 5. PowerLyra
-  **PowerLyra** adopts differentiated graph computation & partition strategies on skewed graphs.
+  **PowerLyra** adopts *differentiated* graph computation & partition strategies on skewed graphs.
 And it embraces both **locality** for *low-degree vertex* and **parallelism** for *high-degree 
 vertex*.
 <br>
