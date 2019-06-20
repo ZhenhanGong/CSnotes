@@ -1,7 +1,7 @@
 # GraphChi
 Large-Scale Graph Computation on Just a PC
 
-Big Graphs != Big Data
+Big Graphs **!=** Big Data
 Facebook 140 billion connections = 1 TB
 
 Graph Computation is hard to scale.
