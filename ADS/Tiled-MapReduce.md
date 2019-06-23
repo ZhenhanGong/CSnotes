@@ -4,7 +4,7 @@
 Phoenix: A MapReduce runtime for shared-memory.
 
 Features
-Parallelism : threads
+Parallelism : **threads**
 Communication: shared address space
 
 Intermediate buffer
