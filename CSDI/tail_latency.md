@@ -59,7 +59,7 @@ pics
 
 ## Tail-tolerant technologies
 ### Hedged Requests
-resend request
+resend requests
 worse median latency
 ### Tied Requests
 Fast cancellation of requests
