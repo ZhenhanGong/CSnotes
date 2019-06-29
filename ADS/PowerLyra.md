@@ -92,7 +92,7 @@ of edges, evenly distribute vertices will result in balanced edges.
   **High-cut** distribute one-direction *in-edges* of *high-degree vertex* to machines by hashing
 **source** vertex.
 - No duplicate edges
-- Load balance(Edges & Vertices), since there are only a little high-degree vertices, add
+- *Load balance*(Edges & Vertices), since there are only a little high-degree vertices, add
 replicas of high-degree vertices will not impact the balance of vertices.
 
 <img src="high-cut.png" alt="high-cut" width="200"/>
