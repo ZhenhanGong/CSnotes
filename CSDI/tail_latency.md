@@ -5,7 +5,7 @@
 ### 1.1 Throughput & Latency
   **Throughput** measures the rate at which requests are processed. (ex: 1 M req/sec) <br>
   **Latency** measures how long a request will be processed. (ex: 18 ms) <br>
-  **CDF** Figure is usually used to measure the latency distribution of requests. CDF stands for 
+  **CDF** Figure is usually used to measure the latency distribution of requests. CDF stands for  
 Cumulative Distribution Function. The x-axis of CDF Figure is latency, and the y-axis is the
 percentage of requests whose latency is less than the corresponding x value.  <br>
   For example, the point *(80%, 5ms)* means 80% percent of requests is processed in less than 5ms.
