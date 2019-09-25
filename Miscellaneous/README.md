@@ -9,3 +9,5 @@
 [shared memory](shared_memory.md)
 
 [git submodule](git_submodules.md)
+
+[smart pointer](SmartPointer.md)
