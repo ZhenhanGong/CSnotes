@@ -231,3 +231,11 @@ A::show()
 1
 0x1c41c20
 ```
+
+## initialization
+```
+std::unique_ptr<int> p1(new int(5)); // int = 5
+std::unique_ptr<int[]> p2(new int[100]); // int[100]
+auto p3 = std::make_unique<int>(5); // int = 5
+auto p4 = std::make_unique<int[]>(100); // int[100]
+```
