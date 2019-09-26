@@ -234,8 +234,12 @@ A::show()
 
 ## initialization
 ```
-std::unique_ptr<int> p1(new int(5)); // int = 5
-std::unique_ptr<int[]> p2(new int[100]); // int[100]
-auto p3 = std::make_unique<int>(5); // int = 5
-auto p4 = std::make_unique<int[]>(100); // int[100]
+Person * p = new Person(5);
+Person * p_arr = new Person[100];
+
+std::unique_ptr<Person> p1(new Person(5)); //  init Person to 5
+std::unique_ptr<Person[]> p2(new Person[100]); // declare arr of Person[100]
+
+auto p3 = std::make_unique<Person>(5); //  init Person to 5
+auto p4 = std::make_unique<Person[]>(100); // declare arr of Person[100]
 ```
