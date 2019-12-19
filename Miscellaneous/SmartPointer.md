@@ -245,38 +245,30 @@ auto p4 = std::make_unique<Person[]>(100); // declare arr of Person[100]
 ```
 
 ## Function that Return Array (4 ways)
-<br>
 ### Classic C++
 ```
 int * foo();
 ```
-<br>
 Cons: require knowledge of array size, caller shall can delete[].
 Pros: no copy is done.
 
-<br>
 ### vector<int>
 ```
 vector<int> foo();
 ```
-<br>
 Cons: copy all elements.
 Pros: vector has a size(), no need to call delete.
 
-<br>
 ### unique_ptr<int[]>
 ```
 unique<int[]> foo();
 ```
-<br>
 Cons: require knowledge of array size.
 Pros: no need to call delete, no copy is done.
 
-<br>
 ### shared_ptr<vector<int>>
 ```
 shared_ptr<vector<int>> foo();
 ```
-<br>
 Pros: vector has a size(), no copy is done, no need to call delete.
 
