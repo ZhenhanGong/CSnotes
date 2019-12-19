@@ -265,10 +265,3 @@ unique<int[]> foo();
 ```
 Cons: require knowledge of array size.<br>
 Pros: no need to call delete, no copy is done.<br>
-
-### shared_ptr<vector<int>>
-```
-shared_ptr<vector<int>> foo();
-```
-Pros: vector has a size(), no copy is done, no need to call delete.<br>
-
