@@ -265,3 +265,9 @@ unique<int[]> foo();
 ```
 Cons: require knowledge of array size.<br>
 Pros: no need to call delete, no copy is done.<br>
+
+### vector<int> #2
+```
+void foo(vector<int>& );
+```
+Pros: has a size(), no need to call delete, no copy is done.
